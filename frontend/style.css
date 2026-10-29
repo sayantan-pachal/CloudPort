@@ -24,13 +24,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Locks height to exact viewport */
+    height: 100vh;
     width: 100vw;
-    overflow: hidden; /* Strictly prevents scrolling */
+    overflow: hidden;
     position: relative;
 }
 
-/* Ambient Background Glows */
 .glow-circle {
     position: absolute;
     width: 350px;
@@ -53,12 +52,11 @@ body {
     background: var(--gdg-red);
 }
 
-/* Glassmorphism Container - Compacted Size */
 .container {
     background: var(--card-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    max-width: 400px; /* Reduced width */
+    max-width: 400px;
     width: 90%;
     border-radius: 16px;
     border: 1px solid var(--border-color);
@@ -69,7 +67,7 @@ body {
 
 header {
     text-align: center;
-    padding: 25px 20px 15px; /* Reduced padding */
+    padding: 25px 20px 15px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -108,11 +106,11 @@ header p {
 }
 
 main {
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px; /* Reduced spacing between fields */
+    margin-bottom: 15px;
 }
 
 label {
@@ -124,10 +122,10 @@ label {
     letter-spacing: 0.3px;
 }
 
-/* Form Inputs - Compacted */
+
 input, select {
     width: 100%;
-    padding: 10px 12px; /* Smaller inner padding */
+    padding: 10px 12px;
     background: var(--input-bg);
     color: var(--text-main);
     border: 1px solid var(--border-color);
@@ -136,12 +134,10 @@ input, select {
     transition: all 0.3s ease;
 }
 
-/* Custom Dropdown Styling */
 select {
-    appearance: none; /* Removes default OS styling */
+    appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
-    /* Custom SVG chevron for the dropdown arrow */
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 12px center;
@@ -163,10 +159,9 @@ select option {
     color: white;
 }
 
-/* Gradient Button */
 button {
     width: 100%;
-    padding: 12px; /* Compacted button */
+    padding: 12px; 
     background: linear-gradient(135deg, var(--gdg-blue), #2b68c2);
     color: white;
     border: none;
