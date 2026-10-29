@@ -35,7 +35,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
 
         const data = await response.json();
 
-        statusMessage.textContent = 'Registration successful! Node active.';
+        statusMessage.textContent = 'Registration successful!';
         statusMessage.className = 'status success';
         document.getElementById('registrationForm').reset();
 
