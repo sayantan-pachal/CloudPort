@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
 
-// Initialize Firebase securely using Environment Variables
 const serviceAccount = {
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
@@ -17,7 +16,6 @@ admin.initializeApp({
 const db = admin.firestore();
 const app = express();
 
-// Strict CORS Configuration linked to your Vercel URL
 const corsOptions = {
     origin: process.env.FRONTEND_URL,
     optionsSuccessStatus: 200
@@ -25,12 +23,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Health check endpoint
 app.get('/', (req, res) => {
     res.status(200).send('CloudPort Backend Node is Active');
 });
 
-// Main POST Endpoint
 app.post('/register', async (req, res) => {
     try {
         const { name, email, department, interest } = req.body;
