@@ -1,5 +1,4 @@
-// Placeholder for your GCP Cloud Function HTTP Trigger URL
-const API_URL = "YOUR_GCP_CLOUD_FUNCTION_URL_HERE";
+const API_URL = "https://cloudport-ihxh.onrender.com/register";
 
 document.getElementById('registrationForm').addEventListener('submit', async (e) => {
     e.preventDefault(); 
