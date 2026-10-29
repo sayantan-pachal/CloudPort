@@ -1,0 +1,217 @@
+:root {
+    --gdg-blue: #4285F4;
+    --gdg-red: #EA4335;
+    --gdg-yellow: #FBBC04;
+    --gdg-green: #34A853;
+    --bg-dark: #0a0a0f;
+    --card-bg: rgba(20, 22, 30, 0.65);
+    --text-main: #ffffff;
+    --text-muted: #a0aab2;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Locks height to exact viewport */
+    width: 100vw;
+    overflow: hidden; /* Strictly prevents scrolling */
+    position: relative;
+}
+
+/* Ambient Background Glows */
+.glow-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.top-left {
+    top: -50px;
+    left: -50px;
+    background: var(--gdg-blue);
+}
+
+.bottom-right {
+    bottom: -50px;
+    right: -50px;
+    background: var(--gdg-red);
+}
+
+/* Glassmorphism Container - Compacted Size */
+.container {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    max-width: 400px; /* Reduced width */
+    width: 90%;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    padding: 25px 20px 15px; /* Reduced padding */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gdg-logo-placeholder {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.dot.blue { color: var(--gdg-blue); background: var(--gdg-blue); }
+.dot.red { color: var(--gdg-red); background: var(--gdg-red); }
+.dot.yellow { color: var(--gdg-yellow); background: var(--gdg-yellow); }
+.dot.green { color: var(--gdg-green); background: var(--gdg-green); }
+
+header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #ffffff, #a0aab2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+main {
+    padding: 20px; /* Reduced padding */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Reduced spacing between fields */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    letter-spacing: 0.3px;
+}
+
+/* Form Inputs - Compacted */
+input, select {
+    width: 100%;
+    padding: 10px 12px; /* Smaller inner padding */
+    background: var(--input-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Custom Dropdown Styling */
+select {
+    appearance: none; /* Removes default OS styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Custom SVG chevron for the dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--gdg-blue);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 12px rgba(66, 133, 244, 0.3), 
+                inset 0 0 4px rgba(66, 133, 244, 0.1);
+}
+
+select option {
+    background-color: #1a1c23;
+    color: white;
+}
+
+/* Gradient Button */
+button {
+    width: 100%;
+    padding: 12px; /* Compacted button */
+    background: linear-gradient(135deg, var(--gdg-blue), #2b68c2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(66, 133, 244, 0.5);
+    background: linear-gradient(135deg, #5c99ff, var(--gdg-blue));
+}
+
+button:disabled {
+    background: #2a3b59;
+    color: #718096;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.hidden { display: none; }
+
+.success {
+    background: rgba(52, 168, 83, 0.1);
+    color: #81c995;
+    border: 1px solid rgba(52, 168, 83, 0.3);
+}
+
+.error {
+    background: rgba(234, 67, 53, 0.1);
+    color: #f28b82;
+    border: 1px solid rgba(234, 67, 53, 0.3);
+}

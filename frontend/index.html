@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudPort | GDG BPPIMT</title>
+    <!-- Custom Favicon Added -->
+    <link rel="icon" href="https://www.sayantanpachal.me/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-circle top-left"></div>
+    <div class="glow-circle bottom-right"></div>
+    
+    <div class="container">
+        <header>
+            <div class="gdg-logo-placeholder">
+                <span class="dot blue"></span>
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <h1>GDG Cloud Workshop</h1>
+            <p>Register for the Serverless Architecture session.</p>
+        </header>
+
+        <main>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="" disabled selected>Select your department</option>
+                        <option value="CSE">Computer Science (CSE)</option>
+                        <option value="IT">Information Technology (IT)</option>
+                        <option value="ECE">Electronics (ECE)</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Primary Cloud Interest *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select an area of interest</option>
+                        <option value="Serverless">Serverless Compute</option>
+                        <option value="Database">Managed Databases</option>
+                        <option value="DevOps">DevOps & CI/CD</option>
+                        <option value="Security">Cloud Security</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">Register Now</button>
+                <div id="statusMessage" class="status hidden"></div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
